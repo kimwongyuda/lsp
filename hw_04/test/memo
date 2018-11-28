@@ -1,0 +1,5 @@
+function에서 파라미터 여러개로 쓸떄
+def func2(??1개 2개 3개 ) 등등
+=> variable arg lis
+
+time and date => long int -> convert 하는거 있음.

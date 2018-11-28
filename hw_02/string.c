@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <string.h>
 /* "hello"라는 값의 첫번째 문자를 *str이 가리킨다.
 while문에서 보면 *str++이라는 부분이 있는데 디버깅을 해서 봤을 때
 맨처음 *str값은 'h'라는 값을 가리키고 쭉쭉 돌리다가 마지막 '\0'값
@@ -51,6 +51,7 @@ void strcpy_a(char dst[], char src[])
 
 	for(i=0;src[i] !='\0';i++)
 		dst[i] = src[i];
+	printf("마지막 이거 왜함? %cqweq \n", src[i]);
 	dst[i]=src[i];
 }
 /* 위 과정에서 *dst 는 hello라는 배열의 마지막 요소를 가리키게 된다. *src는 새로 들어온 ",World!"중 ','를 가리킨다 *dst가 이제 배열의 끝 주소를 가리키기 위해 while문 과 같은 작업을 수행하고 그러면 '\0'을 가리키게 된다. 그 다음 dst--로 하여 '\0' 전 의 요소를 가리키게 하고 그다음 while(*src)를 통해 위에서와 마찬가지로 *dst를 , W o r l d ! 요소 한개씩 점차 가리키게하여 Hello ,World를 만든다*/
@@ -144,6 +145,11 @@ main()
 	/*문자 비교 Hello,World와 Hello,World!를 비교해 0이 나오게함(틀림)*/
 	printf("0: not same, 1: same\n is it same? %d\n", strcmp_p(str1, "Hello,World"));
 	printf("0: not same, 1: same\n is it same?? %d\n", strcmp_a(str1, "Hello,World"));
+
+	char test_str1[10]="q1";
+	char test_str2[10]="q2";
+	strcat(test_str1,test_str2);
+	printf("%s\n",test_str1);
 }
 
 

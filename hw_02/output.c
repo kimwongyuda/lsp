@@ -7,7 +7,7 @@ main()
 	float f = 3.14; double d = 99.999;
 	int *p = &i;
 
-	printf("Output: %c %s %d %#X %ld %.4f %.2lf %p\n", c, s, i, i, l, f, d,p);
+	printf("Output: %c %s %d %#X %ld %.4f %.2lf %d\n", c, s, i, i, l, f, d,*p);
 	putchar(c);
 	puts(s);
 }
