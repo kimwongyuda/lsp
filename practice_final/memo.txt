@@ -1,0 +1,67 @@
+--U--
+ualarm- 기본
+usleep- 기본 + 교수님이 만든거
+uThreadsleep-교수님이 만든거
+
+--midterm--
+mystrcasestr.c: 문자열 가지고 놀기. 포인터 한개 뒤로 밀기. puts. str1+i -> 그만큼 포인터 넘겨서 전달해준다.. p++도 마찬가지.
+cmd.c: gets(문장 입력 받기)
+mygrep.c: file read, fgets, strstr
+alarm.c: file write(fprint), ualarm, SIGINT
+
+--디버깅--
+gcc -g ***.c -o ***
+b 1
+r
+n
+
+--컴파일--
+gcc -o *** ***.c -flag
+
+--lab3--
+merge.c: file fread, fwrite 방법
+
+--practice_final--
+test.c: 정수를 문자열로 저장하는 방법// alarm.c 랑 연계!
+
+--file and directory 시스템콜//시그널 까지--
+참고 하기
+
+--fork와 thread--
+fork1.c: 기본 fork
+fork.c: 기본 fork2
+wait.c: 정수형 변수를 이용한 wait
+race.c
+exec.c: waitpid와 exec들 이용해서 파일 실행시키기
+system.c: 그냥 시스템
+thread.c: 쓰레드 기본
+cmd**: cmd 해버리기
+mysystem: system을 execv로 짜기
+
+--lab04--
+stat.c: 여러가지 stat들
+myrm.c: remove 시스템콜
+mylsl.c: 여러가지 스텟 보여줌. 그외 참고..
+
+--signal--
+sig1.c: sigint
+sig2.c: siguser
+mysleep.c: alarm sig
+alarm.c: alarm sig
+nonreent.c: 바꾸기
+
+============================================================================================
+이제부터는 기말 ㄹㅇ 시험범위 부분
+============================================================================================
+
+--ipc--
+pipe.c: fork로 하고 자식은 write pipe 닫고 부모는 read pipe 닫고 그리고 파일 io 확인
+sync.c: 부모 자식 둘다 pipe할때!.. 문자 한개로 flag식 비교함.
+mymore.c: dup 써서 2개 동시에 파이프 해버리기
+fifo*: fifo로 데이터 주고 받기
+shm.c: shm IPC_PRIVATE로 할때
+sipc*: SHM_KEY에서 데이터 주고 받기. .아직 비지 웨이팅 존재.
+micp3.c: mmap이용해서 copy
+mipc.c: mmap이용해서 카운팅
+assign1.c: pipe.c 부모자식  양방향 가능하게
+asssign2.c: mmap을 shmget으로 바꾸기. 공유메모리 해가지고!

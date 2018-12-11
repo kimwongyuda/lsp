@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+// 이건 그냥 그 메모리 확인 해볼라고
 main()
 {
 	int		a = 0x12345678;
